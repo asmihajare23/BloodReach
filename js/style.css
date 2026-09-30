@@ -807,3 +807,80 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ================= UNIQUE BACKGROUND ================= */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    top: 120px;
+    left: -120px;
+
+    background: #ff5c8a;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: 0.18;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation: backgroundFloat 8s ease-in-out infinite;
+}
+
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    right: -150px;
+    bottom: 50px;
+
+    background: #8e2de2;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: 0.15;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation: backgroundFloat2 10s ease-in-out infinite;
+}
+
+
+@keyframes backgroundFloat {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(80px, 60px);
+    }
+}
+
+
+@keyframes backgroundFloat2 {
+
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-80px, -50px);
+    }
+}
