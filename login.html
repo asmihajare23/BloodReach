@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | BloodConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="auth-page">
+
+
+<div class="auth-container">
+
+    <div class="auth-decoration">
+
+        <div class="auth-blood">
+            🩸
+        </div>
+
+        <h2>
+            Welcome to
+            <span>BloodConnect</span>
+        </h2>
+
+        <p>
+            One community. One purpose.
+            Every drop matters.
+        </p>
+
+    </div>
+
+
+    <div class="auth-box">
+
+        <div class="form-icon">
+            🔐
+        </div>
+
+        <h1>
+            Welcome Back
+        </h1>
+
+        <p>
+            Login to your account
+        </p>
+
+
+        <form onsubmit="loginUser(event)">
+
+            <label>
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required>
+
+
+            <label>
+                Password
+            </label>
+
+            <input
+                type="password"
+                placeholder="Enter your password"
+                required>
+
+
+            <button
+                class="btn primary-btn"
+                type="submit">
+
+                Login →
+
+            </button>
+
+        </form>
+
+
+        <p>
+            Don't have an account?
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </p>
+
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
