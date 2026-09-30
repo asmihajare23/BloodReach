@@ -1,0 +1,37 @@
+/* ================= SEARCH INFO ================= */
+
+.search-info {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.search-info h3 {
+    color: #b00020;
+    margin-bottom: 10px;
+}
+
+
+/* ================= NOTICE ================= */
+
+.notice-section {
+    padding: 20px 8% 70px;
+}
+
+.notice {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+    background: #fff4d6;
+    border-left: 5px solid #e0a000;
+    border-radius: 10px;
+}
+
+.notice p {
+    margin-top: 8px;
+    color: #555;
+}
