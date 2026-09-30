@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Register | BloodConnect</title>
+    <title>Create Account | BloodConnect</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -15,98 +15,231 @@
 <body class="auth-page">
 
 
+<!-- ================= REGISTER CONTAINER ================= -->
+
 <div class="auth-container">
+
+
+    <!-- LEFT SIDE -->
 
     <div class="auth-decoration">
 
         <div class="auth-blood">
-            ❤️
+            +
         </div>
 
-        <h2>
-            Join the
-            <span>Community</span>
-        </h2>
+        <span class="section-label">
+            BLOODCONNECT
+        </span>
+
+        <h1>
+            Become Part<br>
+            of the Community.
+        </h1>
 
         <p>
-            Become part of a community
-            that cares.
+            Create your account and help connect
+            blood donors with people in need.
         </p>
 
     </div>
 
 
+    <!-- RIGHT SIDE -->
+
     <div class="auth-box">
-
-        <div class="form-icon">
-            ✨
-        </div>
-
-        <h1>
-            Create Account
-        </h1>
-
-        <p>
-            Join BloodConnect
-        </p>
-
-
-        <form onsubmit="registerUser(event)">
-
-            <label>
-                Full Name
-            </label>
-
-            <input
-                type="text"
-                placeholder="Your full name"
-                required>
-
-
-            <label>
-                Email
-            </label>
-
-            <input
-                type="email"
-                placeholder="Your email"
-                required>
-
-
-            <label>
-                Password
-            </label>
-
-            <input
-                type="password"
-                placeholder="Create password"
-                required>
-
-
-            <button
-                class="btn primary-btn"
-                type="submit">
-
-                Create Account ❤️
-
-            </button>
-
-        </form>
-
-
-        <p>
-            Already have an account?
-
-            <a href="login.html">
-                Login
-            </a>
-
-        </p>
-
 
         <a href="index.html" class="back-home">
             ← Back to Home
         </a>
+
+
+        <div class="auth-heading">
+
+            <span class="section-label">
+                JOIN US
+            </span>
+
+            <h2>
+                Create Account
+            </h2>
+
+            <p>
+                Register with BloodConnect today.
+            </p>
+
+        </div>
+
+
+        <!-- REGISTER FORM -->
+
+        <form onsubmit="registerUser(event)">
+
+
+            <!-- FULL NAME -->
+
+            <div class="form-icon">
+
+                <label for="registerName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-icon">
+
+                <label for="registerEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="form-icon">
+
+                <label for="registerPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="registerPhone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-icon">
+
+                <label for="registerPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create a password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BLOOD GROUP -->
+
+            <div class="form-icon">
+
+                <label for="registerBlood">
+                    Blood Group
+                </label>
+
+                <select
+                    id="registerBlood"
+                    required
+                >
+
+                    <option value="">
+                        Select Blood Group
+                    </option>
+
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div class="form-icon">
+
+                <label for="registerCity">
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="registerCity"
+                    placeholder="Enter your city"
+                    required
+                >
+
+            </div>
+
+
+            <!-- TERMS -->
+
+            <label class="remember">
+
+                <input
+                    type="checkbox"
+                    required
+                >
+
+                I agree to the BloodConnect
+                terms and conditions.
+
+            </label>
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="btn primary-btn auth-button"
+            >
+
+                Create Account
+
+            </button>
+
+
+        </form>
+
+
+        <!-- LOGIN LINK -->
+
+        <div class="auth-footer">
+
+            <p>
+                Already have an account?
+            </p>
+
+            <a href="login.html">
+                Sign In
+            </a>
+
+        </div>
 
     </div>
 
@@ -116,4 +249,5 @@
 <script src="js/script.js"></script>
 
 </body>
+
 </html>
