@@ -1,1 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Request Blood | BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🩸 Blood<span>Connect</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="become-donor.html">
+            Become a Donor
+        </a>
+
+        <a href="blood-requests.html">
+            Requests
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="login.html"
+           class="nav-login">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="emergency-hero">
+
+    <span>
+        BLOOD REQUIREMENT
+    </span>
+
+    <h1>
+        Request Blood
+    </h1>
+
+    <p>
+        Submit a blood requirement so that potential
+        donors can be informed.
+    </p>
+
+</section>
+
+
+
+<!-- ================= REQUEST FORM ================= -->
+
+<section class="form-section">
+
+
+    <form class="modern-form emergency-form"
+          onsubmit="submitBloodRequest(event)">
+
+
+        <div class="form-icon">
+            🩸
+        </div>
+
+
+        <h2>
+            Blood Requirement Form
+        </h2>
+
+
+        <p class="form-intro">
+            Enter the required information below.
+        </p>
+
+
+
+        <div class="form-grid">
+
+
+            <!-- PATIENT NAME -->
+
+            <div>
+
+                <label for="patientName">
+                    Patient Name
+                </label>
+
+                <input
+                    type="text"
+                    id="patientName"
+                    placeholder="Enter patient name"
+                    required>
+
+            </div>
+
+
+
+            <!-- BLOOD GROUP -->
+
+            <div>
+
+                <label for="requiredBlood">
+                    Required Blood Group
+                </label>
+
+                <select
+                    id="requiredBlood"
+                    required>
+
+                    <option value="">
+                        Select Blood Group
+                    </option>
+
+                    <option>A+</option>
+                    <option>A−</option>
+                    <option>B+</option>
+                    <option>B−</option>
+                    <option>AB+</option>
+                    <option>AB−</option>
+                    <option>O+</option>
+                    <option>O−</option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- UNITS -->
+
+            <div>
+
+                <label for="units">
+                    Units Required
+                </label>
+
+                <input
+                    type="number"
+                    id="units"
+                    min="1"
+                    max="20"
+                    placeholder="Number of units"
+                    required>
+
+            </div>
+
+
+
+            <!-- HOSPITAL -->
+
+            <div>
+
+                <label for="hospital">
+                    Hospital / Medical Centre
+                </label>
+
+                <input
+                    type="text"
+                    id="hospital"
+                    placeholder="Hospital name"
+                    required>
+
+            </div>
+
+
+
+            <!-- CITY -->
+
+            <div>
+
+                <label for="requestCity">
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="requestCity"
+                    placeholder="Enter city"
+                    required>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <label for="contact">
+                    Contact Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="contact"
+                    pattern="[0-9]{10}"
+                    placeholder="10-digit contact number"
+                    required>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- URGENCY -->
+
+        <label for="urgency">
+            Urgency Level
+        </label>
+
+        <select id="urgency"
+                required>
+
+            <option value="">
+                Select urgency level
+            </option>
+
+            <option>
+                Emergency
+            </option>
+
+            <option>
+                Urgent
+            </option>
+
+            <option>
+                Normal
+            </option>
+
+        </select>
+
+
+        <br>
+        <br>
+
+
+
+        <!-- ADDITIONAL MESSAGE -->
+
+        <label for="message">
+            Additional Information
+        </label>
+
+        <textarea
+            id="message"
+            rows="5"
+            placeholder="Enter any additional information..."
+            style="
+                width:100%;
+                padding:13px;
+                border:1px solid #d9ceca;
+                border-radius:3px;
+                font-family:inherit;
+                resize:vertical;
+                margin-bottom:25px;
+            "></textarea>
+
+
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            class="btn emergency-btn">
+
+            Submit Blood Request
+
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= IMPORTANT INFORMATION ================= -->
+
+<section class="notice-section">
+
+    <div class="notice">
+
+        <strong>
+            Important Information
+        </strong>
+
+        <p>
+            BloodConnect is a CEP project prototype.
+            Blood requests displayed on this website are
+            for demonstration purposes.
+        </p>
+
+        <p>
+            In a real implementation, requests would need
+            appropriate verification and secure handling of
+            personal and medical information.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🩸 BloodConnect
+    </div>
+
+    <p>
+        Connecting communities. Inspiring donations.
+        Saving lives.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="become-donor.html">
+            Become a Donor
+        </a>
+
+        <a href="blood-requests.html">
+            Requests
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="emergency.html">
+            Emergency
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 BloodConnect | CEP Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
