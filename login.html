@@ -107,3 +107,177 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | BloodConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="auth-page">
+
+
+<!-- ================= LOGIN CONTAINER ================= -->
+
+<div class="auth-container">
+
+
+    <!-- LEFT SIDE -->
+
+    <div class="auth-decoration">
+
+        <div class="auth-blood">
+            +
+        </div>
+
+        <span class="section-label">
+            BLOODCONNECT
+        </span>
+
+        <h1>
+            Give Blood.<br>
+            Give Hope.
+        </h1>
+
+        <p>
+            Every donor can make a difference.
+            Sign in to continue helping your community.
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="auth-box">
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
+        </a>
+
+
+        <div class="auth-heading">
+
+            <span class="section-label">
+                WELCOME BACK
+            </span>
+
+            <h2>
+                Sign In
+            </h2>
+
+            <p>
+                Login to your BloodConnect account.
+            </p>
+
+        </div>
+
+
+        <!-- LOGIN FORM -->
+
+        <form onsubmit="loginUser(event)">
+
+
+            <!-- EMAIL -->
+
+            <div class="form-icon">
+
+                <label for="loginEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-icon">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- REMEMBER -->
+
+            <div class="login-options">
+
+                <label class="remember">
+
+                    <input
+                        type="checkbox"
+                    >
+
+                    Remember me
+
+                </label>
+
+                <a href="#">
+                    Forgot password?
+                </a>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="btn primary-btn auth-button"
+            >
+
+                Sign In
+
+            </button>
+
+
+        </form>
+
+
+        <!-- REGISTER LINK -->
+
+        <div class="auth-footer">
+
+            <p>
+                Don't have an account?
+            </p>
+
+            <a href="register.html">
+                Create an account
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
