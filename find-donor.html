@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Find a Donor | BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        🩸 <span>Blood<span>Connect</span></span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="find-donor.html"
+           class="active">
+            Find Donor
+        </a>
+
+        <a href="blood-requests.html">
+            Requests
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="login.html"
+           class="nav-login">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- PAGE HEADER -->
+
+<section class="page-hero">
+
+    <span class="section-label">
+        DONOR SEARCH
+    </span>
+
+    <h1>
+        Find a <span>Potential Donor</span>
+    </h1>
+
+    <p>
+        Search using blood group and location.
+    </p>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+    <div class="search-box">
+
+        <h2>🔎 Search Donors</h2>
+
+        <p>
+            Enter the required details below.
+        </p>
+
+        <br>
+
+
+        <div class="form-grid">
+
+            <!-- BLOOD GROUP -->
+
+            <div>
+
+                <label>
+                    Blood Group
+                </label>
+
+                <select id="bloodGroup">
+
+                    <option value="">
+                        Select Blood Group
+                    </option>
+
+                    <option value="A+">
+                        A+
+                    </option>
+
+                    <option value="A-">
+                        A−
+                    </option>
+
+                    <option value="B+">
+                        B+
+                    </option>
+
+                    <option value="B-">
+                        B−
+                    </option>
+
+                    <option value="AB+">
+                        AB+
+                    </option>
+
+                    <option value="AB-">
+                        AB−
+                    </option>
+
+                    <option value="O+">
+                        O+
+                    </option>
+
+                    <option value="O-">
+                        O−
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- LOCATION -->
+
+            <div>
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Example: Kolhapur">
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="btn primary-btn"
+            onclick="searchDonors()">
+
+            🔎 Search Donors
+
+        </button>
+
+    </div>
+
+
+    <!-- RESULTS -->
+
+    <div id="donorResults">
+
+        <div class="search-info">
+
+            <h3>
+                🔎 Search for a potential donor
+            </h3>
+
+            <p>
+                Select a blood group and enter a location
+                to see demo matching results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMPORTANT NOTE -->
+
+<section class="notice-section">
+
+    <div class="notice">
+
+        <strong>⚠️ Important:</strong>
+
+        <p>
+            This website is a CEP project prototype.
+            The displayed donor information is fictional
+            and does not represent real donor availability.
+            In a real system, donor information would require
+            secure storage, consent and verification.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-logo">
+        🩸 BloodConnect
+    </div>
+
+    <p>
+        Connecting communities. Inspiring donations.
+    </p>
+
+    <p class="copyright">
+        © 2026 BloodConnect | CEP Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
