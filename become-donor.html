@@ -1,1 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Become a Donor | BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🩸 Blood<span>Connect</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="become-donor.html"
+           class="active">
+            Become a Donor
+        </a>
+
+        <a href="blood-requests.html">
+            Requests
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="login.html"
+           class="nav-login">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+    <span class="section-label">
+        JOIN OUR COMMUNITY
+    </span>
+
+    <h1>
+        Become a
+        <span>Blood Donor</span>
+    </h1>
+
+    <p>
+        Register yourself as a potential donor
+        and help someone in need.
+    </p>
+
+</section>
+
+
+
+<!-- ================= REGISTRATION FORM ================= -->
+
+<section class="form-section">
+
+
+    <form class="modern-form"
+          onsubmit="registerDonor(event)">
+
+
+        <div class="form-icon">
+            ❤️
+        </div>
+
+
+        <h2>
+            Donor Registration
+        </h2>
+
+
+        <p class="form-intro">
+            Please provide your basic information
+            to register as a potential donor.
+        </p>
+
+
+
+        <div class="form-grid">
+
+
+            <!-- FULL NAME -->
+
+            <div>
+
+                <label for="donorName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="donorName"
+                    placeholder="Enter your full name"
+                    required>
+
+            </div>
+
+
+
+            <!-- AGE -->
+
+            <div>
+
+                <label for="age">
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    id="age"
+                    min="18"
+                    max="65"
+                    placeholder="Enter your age"
+                    required>
+
+            </div>
+
+
+
+            <!-- BLOOD GROUP -->
+
+            <div>
+
+                <label for="donorBloodGroup">
+                    Blood Group
+                </label>
+
+                <select
+                    id="donorBloodGroup"
+                    required>
+
+                    <option value="">
+                        Select Blood Group
+                    </option>
+
+                    <option>A+</option>
+                    <option>A−</option>
+                    <option>B+</option>
+                    <option>B−</option>
+                    <option>AB+</option>
+                    <option>AB−</option>
+                    <option>O+</option>
+                    <option>O−</option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- CITY -->
+
+            <div>
+
+                <label for="city">
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Enter your city"
+                    required>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div>
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div>
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    pattern="[0-9]{10}"
+                    placeholder="10-digit phone number"
+                    required>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- CONSENT -->
+
+        <div class="consent">
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    required>
+
+                I agree to participate as a potential
+                blood donor and understand that my
+                information would be used only for
+                donor-connect purposes in a real system.
+
+            </label>
+
+        </div>
+
+
+
+        <button
+            type="submit"
+            class="btn primary-btn">
+
+            Register as a Donor
+
+        </button>
+
+
+    </form>
+
+</section>
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="donor-benefits">
+
+    <span class="section-label">
+        WHY BECOME A DONOR?
+    </span>
+
+    <h2>
+        Make a Difference
+        <span>Through Your Community</span>
+    </h2>
+
+
+
+    <div class="benefit-grid">
+
+
+        <!-- BENEFIT 1 -->
+
+        <div class="benefit-card">
+
+            <div>
+                ❤️
+            </div>
+
+            <h3>
+                Help Others
+            </h3>
+
+            <p>
+                Your willingness to donate can help
+                people who require blood.
+            </p>
+
+        </div>
+
+
+
+        <!-- BENEFIT 2 -->
+
+        <div class="benefit-card">
+
+            <div>
+                🤝
+            </div>
+
+            <h3>
+                Support Your Community
+            </h3>
+
+            <p>
+                Become part of a community that
+                encourages responsible blood donation.
+            </p>
+
+        </div>
+
+
+
+        <!-- BENEFIT 3 -->
+
+        <div class="benefit-card">
+
+            <div>
+                🌟
+            </div>
+
+            <h3>
+                Inspire Others
+            </h3>
+
+            <p>
+                Your participation can encourage
+                others to learn about blood donation.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INFORMATION ================= -->
+
+<section class="home-about">
+
+    <div class="about-image">
+        🩸
+    </div>
+
+
+    <div class="about-text">
+
+        <span class="section-label">
+            BEFORE YOU REGISTER
+        </span>
+
+        <h2>
+            Donate
+            <span>Responsibly.</span>
+        </h2>
+
+        <p>
+            Blood donation should always be carried out
+            through an authorized blood centre or healthcare
+            facility.
+        </p>
+
+        <p>
+            Eligibility to donate depends on factors such
+            as age, health condition, medications and other
+            requirements determined by qualified healthcare
+            professionals.
+        </p>
+
+        <p>
+            Please consult an authorized blood centre to
+            confirm your eligibility before donating.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🩸 BloodConnect
+    </div>
+
+    <p>
+        Connecting communities. Inspiring donations.
+        Saving lives.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="request-blood.html">
+            Request Blood
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="emergency.html">
+            Emergency
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 BloodConnect | CEP Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
