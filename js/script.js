@@ -92,3 +92,15 @@ function registerUser(event) {
     );
 
 }
+/* ================= REQUEST HELP ================= */
+
+function requestHelp(bloodGroup, hospital) {
+
+    alert(
+        "Thank you for offering to help!\n\n" +
+        "Blood Group: " + bloodGroup + "\n" +
+        "Hospital: " + hospital + "\n\n" +
+        "In the real system, you would be connected with the requester."
+    );
+
+}
