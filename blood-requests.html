@@ -1,1 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Blood Requests | BloodConnect</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        🩸 Blood<span>Connect</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="become-donor.html">
+            Become a Donor
+        </a>
+
+        <a href="blood-requests.html"
+           class="active">
+            Requests
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="login.html"
+           class="nav-login">
+            Login
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+    <span class="section-label">
+        COMMUNITY SUPPORT
+    </span>
+
+    <h1>
+        Blood
+        <span>Requests</span>
+    </h1>
+
+    <p>
+        View sample blood requirements submitted
+        by the community.
+    </p>
+
+</section>
+
+
+
+<!-- ================= REQUESTS ================= -->
+
+<section class="requests-section">
+
+
+    <!-- REQUEST 1 -->
+
+    <div class="request-card urgent">
+
+        <div class="request-top">
+
+            <span class="urgency">
+                URGENT
+            </span>
+
+            <span class="blood-tag">
+                B+
+            </span>
+
+        </div>
+
+
+        <h2>
+            2 Units of B+ Blood Required
+        </h2>
+
+
+        <p>
+            <strong>Hospital:</strong>
+            City Care Hospital
+        </p>
+
+        <p>
+            <strong>Location:</strong>
+            Pune, Maharashtra
+        </p>
+
+        <p>
+            <strong>Requirement:</strong>
+            Urgent
+        </p>
+
+
+        <br>
+
+
+        <button
+            class="btn primary-btn"
+            onclick="requestHelp('B+', 'City Care Hospital')">
+
+            I Can Help
+
+        </button>
+
+    </div>
+
+
+
+    <!-- REQUEST 2 -->
+
+    <div class="request-card normal-request">
+
+        <div class="request-top">
+
+            <span class="urgency normal">
+                NORMAL
+            </span>
+
+            <span class="blood-tag">
+                A+
+            </span>
+
+        </div>
+
+
+        <h2>
+            1 Unit of A+ Blood Required
+        </h2>
+
+
+        <p>
+            <strong>Hospital:</strong>
+            General Hospital
+        </p>
+
+        <p>
+            <strong>Location:</strong>
+            Kolhapur, Maharashtra
+        </p>
+
+        <p>
+            <strong>Requirement:</strong>
+            Normal
+        </p>
+
+
+        <br>
+
+
+        <button
+            class="btn primary-btn"
+            onclick="requestHelp('A+', 'General Hospital')">
+
+            I Can Help
+
+        </button>
+
+    </div>
+
+
+
+    <!-- REQUEST 3 -->
+
+    <div class="request-card urgent">
+
+        <div class="request-top">
+
+            <span class="urgency">
+                URGENT
+            </span>
+
+            <span class="blood-tag">
+                O−
+            </span>
+
+        </div>
+
+
+        <h2>
+            3 Units of O− Blood Required
+        </h2>
+
+
+        <p>
+            <strong>Hospital:</strong>
+            Life Care Hospital
+        </p>
+
+        <p>
+            <strong>Location:</strong>
+            Mumbai, Maharashtra
+        </p>
+
+        <p>
+            <strong>Requirement:</strong>
+            Urgent
+        </p>
+
+
+        <br>
+
+
+        <button
+            class="btn primary-btn"
+            onclick="requestHelp('O-', 'Life Care Hospital')">
+
+            I Can Help
+
+        </button>
+
+    </div>
+
+
+
+    <!-- REQUEST 4 -->
+
+    <div class="request-card normal-request">
+
+        <div class="request-top">
+
+            <span class="urgency normal">
+                NORMAL
+            </span>
+
+            <span class="blood-tag">
+                AB+
+            </span>
+
+        </div>
+
+
+        <h2>
+            1 Unit of AB+ Blood Required
+        </h2>
+
+
+        <p>
+            <strong>Hospital:</strong>
+            Sunrise Medical Centre
+        </p>
+
+        <p>
+            <strong>Location:</strong>
+            Satara, Maharashtra
+        </p>
+
+        <p>
+            <strong>Requirement:</strong>
+            Normal
+        </p>
+
+
+        <br>
+
+
+        <button
+            class="btn primary-btn"
+            onclick="requestHelp('AB+', 'Sunrise Medical Centre')">
+
+            I Can Help
+
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= INFORMATION ================= -->
+
+<section class="notice-section">
+
+    <div class="notice">
+
+        <strong>
+            Demo Information
+        </strong>
+
+        <p>
+            The blood requests shown on this page are
+            fictional examples created for the CEP project.
+        </p>
+
+        <p>
+            A real platform would verify requests and
+            securely handle patient and hospital information.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Need Blood?
+    </h2>
+
+    <p>
+        Submit a new blood requirement through
+        BloodConnect.
+    </p>
+
+    <a href="request-blood.html"
+       class="btn primary-btn">
+
+        Request Blood
+
+    </a>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🩸 BloodConnect
+    </div>
+
+    <p>
+        Connecting communities. Inspiring donations.
+        Saving lives.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="become-donor.html">
+            Become a Donor
+        </a>
+
+        <a href="request-blood.html">
+            Request Blood
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="emergency.html">
+            Emergency
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 BloodConnect | CEP Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
