@@ -15,23 +15,35 @@
 
 </head>
 
+
 <body>
+
+
+<!-- ================= NAVBAR ================= -->
 
 <header class="navbar">
 
     <div class="logo">
-        🩸 <span>Blood<span>Connect</span></span>
+        🩸 Blood<span>Connect</span>
     </div>
 
     <nav>
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="about.html">
+            About
+        </a>
 
         <a href="find-donor.html"
            class="active">
             Find Donor
+        </a>
+
+        <a href="become-donor.html">
+            Become a Donor
         </a>
 
         <a href="blood-requests.html">
@@ -52,7 +64,8 @@
 </header>
 
 
-<!-- PAGE HEADER -->
+
+<!-- ================= PAGE HERO ================= -->
 
 <section class="page-hero">
 
@@ -61,38 +74,48 @@
     </span>
 
     <h1>
-        Find a <span>Potential Donor</span>
+        Find a
+        <span>Potential Donor</span>
     </h1>
 
     <p>
-        Search using blood group and location.
+        Search for potential donors by blood group
+        and location.
     </p>
 
 </section>
 
 
-<!-- SEARCH -->
+
+<!-- ================= SEARCH SECTION ================= -->
 
 <section class="search-section">
 
+
     <div class="search-box">
 
-        <h2>🔎 Search Donors</h2>
+        <div class="form-icon">
+            🔎
+        </div>
+
+        <h2>
+            Search Donors
+        </h2>
 
         <p>
-            Enter the required details below.
+            Enter the required blood group and location
+            to find a potential match.
         </p>
-
-        <br>
 
 
         <div class="form-grid">
+
 
             <!-- BLOOD GROUP -->
 
             <div>
 
-                <label>
+                <label for="bloodGroup">
                     Blood Group
                 </label>
 
@@ -139,20 +162,22 @@
             </div>
 
 
+
             <!-- LOCATION -->
 
             <div>
 
-                <label>
+                <label for="location">
                     Location
                 </label>
 
                 <input
                     type="text"
                     id="location"
-                    placeholder="Example: Kolhapur">
+                    placeholder="Enter city or area">
 
             </div>
+
 
         </div>
 
@@ -161,55 +186,92 @@
             class="btn primary-btn"
             onclick="searchDonors()">
 
-            🔎 Search Donors
+            Search Donors
 
         </button>
 
     </div>
 
 
-    <!-- RESULTS -->
+
+    <!-- ================= RESULTS ================= -->
 
     <div id="donorResults">
 
         <div class="search-info">
 
             <h3>
-                🔎 Search for a potential donor
+                Search for a Potential Donor
             </h3>
 
             <p>
                 Select a blood group and enter a location
-                to see demo matching results.
+                to view a potential matching donor.
             </p>
 
         </div>
 
     </div>
 
+
 </section>
 
 
-<!-- IMPORTANT NOTE -->
+
+<!-- ================= INFORMATION ================= -->
 
 <section class="notice-section">
 
     <div class="notice">
 
-        <strong>⚠️ Important:</strong>
+        <strong>
+            Important Information
+        </strong>
 
         <p>
-            This website is a CEP project prototype.
-            The displayed donor information is fictional
-            and does not represent real donor availability.
-            In a real system, donor information would require
-            secure storage, consent and verification.
+            BloodConnect is currently a CEP project
+            prototype. The donor information displayed
+            by this website is fictional and is intended
+            only for demonstration purposes.
+        </p>
+
+        <p>
+            A real-world system would require secure
+            data storage, donor consent, identity
+            verification and appropriate privacy measures.
         </p>
 
     </div>
 
 </section>
 
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Couldn't Find a Donor?
+    </h2>
+
+    <p>
+        You can submit a blood requirement and let
+        potential donors know about it.
+    </p>
+
+    <a href="request-blood.html"
+       class="btn primary-btn">
+
+        Request Blood
+
+    </a>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -219,7 +281,38 @@
 
     <p>
         Connecting communities. Inspiring donations.
+        Saving lives.
     </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="find-donor.html">
+            Find Donor
+        </a>
+
+        <a href="request-blood.html">
+            Request Blood
+        </a>
+
+        <a href="blood-banks.html">
+            Blood Banks
+        </a>
+
+        <a href="emergency.html">
+            Emergency
+        </a>
+
+    </div>
+
 
     <p class="copyright">
         © 2026 BloodConnect | CEP Project
