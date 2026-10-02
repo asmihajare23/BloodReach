@@ -4,279 +4,411 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | BloodConnect</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style.css">
+    <title>Login | BloodReach</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
-<body class="auth-page">
+
+<body>
 
 
-<div class="auth-container">
+<!-- ================= NAVBAR ================= -->
 
-    <div class="auth-decoration">
+<nav class="navbar">
 
-        <div class="auth-blood">
-            🩸
-        </div>
-
-        <h2>
-            Welcome to
-            <span>BloodConnect</span>
-        </h2>
-
-        <p>
-            One community. One purpose.
-            Every drop matters.
-        </p>
-
-    </div>
+    <a href="index.html" class="logo">
+        Blood<span>Reach</span> 🩸
+    </a>
 
 
-    <div class="auth-box">
+    <ul class="nav-links">
 
-        <div class="form-icon">
-            🔐
-        </div>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
 
-        <h1>
-            Welcome Back
-        </h1>
+        <li>
+            <a href="about.html">About</a>
+        </li>
 
-        <p>
-            Login to your account
-        </p>
+        <li>
+            <a href="find-donor.html">Find Donor</a>
+        </li>
 
+        <li>
+            <a href="become-donor.html">Donate</a>
+        </li>
 
-        <form onsubmit="loginUser(event)">
+        <li>
+            <a href="request-blood.html">Request Blood</a>
+        </li>
 
-            <label>
-                Email Address
-            </label>
+        <li>
+            <a href="blood-requests.html">Requests</a>
+        </li>
 
-            <input
-                type="email"
-                placeholder="Enter your email"
-                required>
+        <li>
+            <a href="blood-banks.html">Blood Banks</a>
+        </li>
 
-
-            <label>
-                Password
-            </label>
-
-            <input
-                type="password"
-                placeholder="Enter your password"
-                required>
-
-
-            <button
-                class="btn primary-btn"
-                type="submit">
-
-                Login →
-
-            </button>
-
-        </form>
-
-
-        <p>
-            Don't have an account?
-
-            <a href="register.html">
-                Register
+        <li>
+            <a href="login.html" class="nav-login">
+                Login
             </a>
+        </li>
 
-        </p>
+    </ul>
 
-
-        <a href="index.html" class="back-home">
-            ← Back to Home
-        </a>
-
-    </div>
-
-</div>
+</nav>
 
 
-<script src="js/script.js"></script>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
+<!-- ================= LOGIN PAGE ================= -->
 
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login | BloodConnect</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-
-<body class="auth-page">
+<section class="auth-page">
 
 
-<!-- ================= LOGIN CONTAINER ================= -->
-
-<div class="auth-container">
+    <div class="auth-container">
 
 
-    <!-- LEFT SIDE -->
+        <!-- LEFT SIDE -->
 
-    <div class="auth-decoration">
+        <div class="auth-brand">
 
-        <div class="auth-blood">
-            +
-        </div>
-
-        <span class="section-label">
-            BLOODCONNECT
-        </span>
-
-        <h1>
-            Give Blood.<br>
-            Give Hope.
-        </h1>
-
-        <p>
-            Every donor can make a difference.
-            Sign in to continue helping your community.
-        </p>
-
-    </div>
+            <div class="auth-icon">
+                🩸
+            </div>
 
 
-    <!-- RIGHT SIDE -->
+            <h1>
+                Welcome Back
+            </h1>
 
-    <div class="auth-box">
-
-        <a href="index.html" class="back-home">
-            ← Back to Home
-        </a>
-
-
-        <div class="auth-heading">
-
-            <span class="section-label">
-                WELCOME BACK
-            </span>
-
-            <h2>
-                Sign In
-            </h2>
 
             <p>
-                Login to your BloodConnect account.
+                Sign in to BloodReach and stay connected
+                with a community working together to
+                support blood donation.
+            </p>
+
+
+            <br>
+
+
+            <p>
+                ❤️ Give Blood. Give Hope.
             </p>
 
         </div>
 
 
-        <!-- LOGIN FORM -->
 
-        <form onsubmit="loginUser(event)">
+        <!-- RIGHT SIDE -->
+
+        <div class="auth-form">
 
 
-            <!-- EMAIL -->
+            <h2>
+                Login
+            </h2>
 
-            <div class="form-icon">
 
-                <label for="loginEmail">
-                    Email Address
-                </label>
+            <p class="auth-subtitle">
+                Access your BloodReach account
+            </p>
 
-                <input
-                    type="email"
-                    id="loginEmail"
-                    placeholder="Enter your email"
-                    required
+
+
+            <!-- SOCIAL LOGIN -->
+
+            <div class="social-login">
+
+
+                <button
+                    type="button"
+                    class="social-btn google"
+                    onclick="googleLogin()"
                 >
+
+                    <strong>G</strong>
+                    &nbsp; Continue with Google
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="social-btn facebook"
+                    onclick="facebookLogin()"
+                >
+
+                    <strong>f</strong>
+                    &nbsp; Continue with Facebook
+
+                </button>
 
             </div>
 
 
-            <!-- PASSWORD -->
 
-            <div class="form-icon">
+            <!-- DIVIDER -->
 
-                <label for="loginPassword">
-                    Password
-                </label>
+            <div class="divider">
 
-                <input
-                    type="password"
-                    id="loginPassword"
-                    placeholder="Enter your password"
-                    required
-                >
+                OR CONTINUE WITH EMAIL
 
             </div>
 
 
-            <!-- REMEMBER -->
 
-            <div class="login-options">
+            <!-- LOGIN FORM -->
 
-                <label class="remember">
+            <form onsubmit="loginUser(event)">
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
 
                     <input
-                        type="checkbox"
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        required
                     >
 
-                    Remember me
+                </div>
 
-                </label>
 
-                <a href="#">
-                    Forgot password?
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- REMEMBER -->
+
+                <div
+                    style="
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    margin-bottom:22px;
+                    font-size:13px;
+                    "
+                >
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                        >
+
+                        Remember me
+
+                    </label>
+
+
+                    <a
+                        href="#"
+                        onclick="forgotPassword(); return false;"
+                        style="
+                        color:#c9152b;
+                        font-weight:700;
+                        "
+                    >
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width:100%;"
+                >
+
+                    🔐 Login
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- SIGN UP -->
+
+            <div class="auth-switch">
+
+                Don't have an account?
+
+                <a href="signup.html">
+                    Create an account
                 </a>
 
             </div>
 
 
-            <!-- BUTTON -->
+        </div>
 
-            <button
-                type="submit"
-                class="btn primary-btn auth-button"
-            >
+    </div>
 
-                Sign In
-
-            </button>
+</section>
 
 
-        </form>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-grid">
 
 
-        <!-- REGISTER LINK -->
+        <div class="footer-brand">
 
-        <div class="auth-footer">
+            <h2>
+                BloodReach 🩸
+            </h2>
+
 
             <p>
-                Don't have an account?
+                Connecting potential blood donors
+                with people who need help.
             </p>
 
-            <a href="register.html">
-                Create an account
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="find-donor.html">
+                Find Donor
+            </a>
+
+
+            <a href="blood-banks.html">
+                Blood Banks
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Help
+            </h3>
+
+
+            <a href="become-donor.html">
+                Become a Donor
+            </a>
+
+
+            <a href="request-blood.html">
+                Request Blood
+            </a>
+
+
+            <a href="blood-requests.html">
+                Blood Requests
+            </a>
+
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Account
+            </h3>
+
+
+            <a href="login.html">
+                Login
+            </a>
+
+
+            <a href="signup.html">
+                Sign Up
             </a>
 
         </div>
 
     </div>
 
-</div>
 
 
-<script src="js/script.js"></script>
+    <div class="footer-bottom">
+
+        © 2026 BloodReach.
+        Built with ❤️ to support blood donation.
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="./js/script.js"></script>
+
 
 </body>
 
