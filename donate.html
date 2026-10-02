@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Become a Donor | BloodReach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="./style.css">
+
+
+    <style>
+
+        /* =========================
+           DONATE HERO
+        ========================= */
+
+        .donate-hero {
+
+            min-height: 60vh;
+
+            padding: 150px 8% 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(255,80,110,.25),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff1f4,
+                    #ffd9e2
+                );
+
+        }
+
+
+        .donate-content {
+
+            max-width: 650px;
+
+        }
+
+
+        .donate-badge {
+
+            display: inline-block;
+
+            padding: 9px 18px;
+
+            border-radius: 30px;
+
+            background: #ffe0e7;
+
+            color: #b70f35;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .donate-content h1 {
+
+            margin-top: 20px;
+
+            font-size: clamp(
+                45px,
+                6vw,
+                75px
+            );
+
+            line-height: 1.05;
+
+            color: #171717;
+
+        }
+
+
+        .donate-content h1 span {
+
+            color: #c5123b;
+
+        }
+
+
+        .donate-content p {
+
+            margin-top: 22px;
+
+            max-width: 570px;
+
+            color: #333333;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .donate-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-top: 28px;
+
+            padding: 14px 25px;
+
+            border-radius: 30px;
+
+            background: #c5123b;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            transition: .3s;
+
+        }
+
+
+        .donate-button:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(197,18,59,.3);
+
+        }
+
+
+        /* =========================
+           HERO BLOOD ICON
+        ========================= */
+
+        .donate-visual {
+
+            width: 300px;
+
+            height: 300px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ff7891,
+                    #bd0e36
+                );
+
+            box-shadow:
+                0 30px 70px
+                rgba(150,0,40,.25);
+
+            animation: floating 4s ease-in-out infinite;
+
+        }
+
+
+        .donate-visual i {
+
+            font-size: 115px;
+
+            color: white;
+
+        }
+
+
+        @keyframes floating {
+
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+
+        /* =========================
+           WHY DONATE
+        ========================= */
+
+        .benefits-section {
+
+            padding: 90px 8%;
+
+            background: white;
+
+        }
+
+
+        .benefits {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .benefit-card {
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-radius: 25px;
+
+            background: #fff8f9;
+
+            border: 1px solid #f2dce1;
+
+            transition: .4s;
+
+        }
+
+
+        .benefit-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(120,0,30,.1);
+
+        }
+
+
+        .benefit-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: auto auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: #ffe2e8;
+
+            color: #c5123b;
+
+            font-size: 28px;
+
+        }
+
+
+        .benefit-card h3 {
+
+            color: #171717;
+
+            font-size: 18px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .benefit-card p {
+
+            color: #555555;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================
+           DONOR FORM
+        ========================= */
+
+        .register-section {
+
+            padding: 100px 8%;
+
+            background: #fff3f5;
+
+        }
+
+
+        .register-box {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            border: 1px solid #f0d7dd;
+
+            box-shadow:
+                0 20px 60px
+                rgba(100,0,30,.08);
+
+        }
+
+
+        .register-heading {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        .register-heading h2 {
+
+            font-size: 32px;
+
+            color: #171717;
+
+        }
+
+
+        .register-heading h2 span {
+
+            color: #c5123b;
+
+        }
+
+
+        .register-heading p {
+
+            margin-top: 8px;
+
+            font-size: 13px;
+
+            color: #555555;
+
+        }
+
+
+        .donor-form {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .input-group {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .input-group label {
+
+            margin-bottom: 8px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            color: #171717;
+
+        }
+
+
+        .input-group input,
+        .input-group select {
+
+            padding: 14px;
+
+            border-radius: 12px;
+
+            border: 1px solid #e1cbd1;
+
+            background: #fff;
+
+            color: #171717;
+
+            font-family: 'Poppins', sans-serif;
+
+            outline: none;
+
+            transition: .3s;
+
+        }
+
+
+        .input-group input:focus,
+        .input-group select:focus {
+
+            border-color: #c5123b;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(197,18,59,.08);
+
+        }
+
+
+        .full-width {
+
+            grid-column: 1 / -1;
+
+        }
+
+
+        .register-button {
+
+            grid-column: 1 / -1;
+
+            text-align: center;
+
+            margin-top: 10px;
+
+        }
+
+
+        .register-button button {
+
+            padding: 14px 35px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #c5123b;
+
+            color: white;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+        .register-button button:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(197,18,59,.25);
+
+        }
+
+
+        /* =========================
+           DONATION STEPS
+        ========================= */
+
+        .steps-section {
+
+            padding: 90px 8%;
+
+            background: white;
+
+        }
+
+
+        .steps {
+
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 25px;
+
+        }
+
+
+        .step {
+
+            text-align: center;
+
+            padding: 25px;
+
+        }
+
+
+        .step-number {
+
+            width: 55px;
+
+            height: 55px;
+
+            margin: auto auto 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #c5123b;
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+        }
+
+
+        .step h3 {
+
+            font-size: 17px;
+
+            color: #171717;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .step p {
+
+            color: #555555;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media(max-width:900px) {
+
+            .donate-hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding-top: 160px;
+
+            }
+
+
+            .donate-visual {
+
+                width: 230px;
+
+                height: 230px;
+
+            }
+
+
+            .donate-visual i {
+
+                font-size: 85px;
+
+            }
+
+
+            .benefits {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .steps {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .donor-form {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .full-width {
+
+                grid-column: auto;
+
+            }
+
+
+            .register-button {
+
+                grid-column: auto;
+
+            }
+
+
+            .register-box {
+
+                padding: 25px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <a href="index.html"
+       class="logo">
+
+        🩸 BloodReach
+
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="donor.html">
+            Find Donor
+        </a>
+
+        <a href="donate.html"
+           class="active">
+
+            Donate
+
+        </a>
+
+        <a href="request.html">
+            Request Blood
+        </a>
+
+    </nav>
+
+
+    <a href="login.html"
+       class="login-btn">
+
+        Login
+
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="donate-hero">
+
+
+    <div class="donate-content">
+
+        <span class="donate-badge">
+
+            🩸 BECOME A BLOOD DONOR
+
+        </span>
+
+
+        <h1>
+
+            Your blood can
+            <span>save a life.</span>
+
+        </h1>
+
+
+        <p>
+
+            A small act of kindness can make
+            a huge difference. Register yourself
+            as a blood donor and become part of
+            the BloodReach community.
+
+        </p>
+
+
+        <a href="#register"
+           class="donate-button">
+
+            <i class="fa-solid fa-heart"></i>
+
+            Register as Donor
+
+        </a>
+
+    </div>
+
+
+    <div class="donate-visual">
+
+        <i class="fa-solid fa-droplet"></i>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY DONATE
+========================= -->
+
+<section class="benefits-section">
+
+
+    <div class="section-heading">
+
+        <p>
+            MAKE A DIFFERENCE
+        </p>
+
+        <h2>
+
+            WHY SHOULD YOU
+            <span>DONATE?</span>
+
+        </h2>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+    <div class="benefits">
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <h3>
+                Save Lives
+            </h3>
+
+            <p>
+
+                Your blood donation can support
+                patients who need blood during
+                medical treatment and emergencies.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-people-group"></i>
+
+            </div>
+
+            <h3>
+                Help Your Community
+            </h3>
+
+            <p>
+
+                Become part of a community
+                where people come together
+                to help others.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+
+                <i class="fa-solid fa-hand-holding-heart"></i>
+
+            </div>
+
+            <h3>
+                Spread Hope
+            </h3>
+
+            <p>
+
+                A simple donation can give
+                someone and their family
+                a reason to hope.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     REGISTER FORM
+========================= -->
+
+<section class="register-section"
+         id="register">
+
+
+    <div class="register-box">
+
+
+        <div class="register-heading">
+
+            <h2>
+
+                Become a
+                <span>Donor</span>
+
+            </h2>
+
+            <p>
+
+                Fill in your details to join
+                the BloodReach donor community.
+
+            </p>
+
+        </div>
+
+
+
+        <form class="donor-form">
+
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Enter your full name"
+                    required>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    placeholder="Enter your age"
+                    min="18"
+                    required>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Blood Group
+                </label>
+
+                <select required>
+
+                    <option value="">
+                        Select Blood Group
+                    </option>
+
+                    <option>A+</option>
+                    <option>A-</option>
+
+                    <option>B+</option>
+                    <option>B-</option>
+
+                    <option>AB+</option>
+                    <option>AB-</option>
+
+                    <option>O+</option>
+                    <option>O-</option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="Enter phone number"
+                    required>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="City / Area"
+                    required>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>
+                    Last Donation Date
+                </label>
+
+                <input
+                    type="date">
+
+            </div>
+
+
+
+            <div class="input-group full-width">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+            </div>
+
+
+
+            <div class="register-button">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-droplet"></i>
+
+                    Register as Donor
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="steps-section">
+
+
+    <div class="section-heading">
+
+        <p>
+            SIMPLE PROCESS
+        </p>
+
+        <h2>
+
+            HOW IT
+            <span>WORKS</span>
+
+        </h2>
+
+        <div class="heading-line"></div>
+
+    </div>
+
+
+
+    <div class="steps">
+
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Register
+            </h3>
+
+            <p>
+                Enter your basic details
+                and blood group.
+            </p>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Get Connected
+            </h3>
+
+            <p>
+                Your donor profile can help
+                people searching for blood.
+            </p>
+
+        </div>
+
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                Help Someone
+            </h3>
+
+            <p>
+                Respond to a blood request
+                when you are available.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        🩸 BloodReach
+    </div>
+
+    <p>
+        Connecting hearts, donors and hope.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="donor.html">
+            Find Donor
+        </a>
+
+        <a href="donate.html">
+            Donate
+        </a>
+
+        <a href="request.html">
+            Request Blood
+        </a>
+
+    </div>
+
+
+    <div class="socials">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <i class="fa-brands fa-facebook"></i>
+
+        <i class="fa-brands fa-linkedin"></i>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 BloodReach.
+        Made with ❤️ to save lives.
+
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
