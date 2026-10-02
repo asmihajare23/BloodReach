@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Request Blood | BloodReach</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff;
+            color: #171717;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 15px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: rgba(255,255,255,0.94);
+            border-radius: 18px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+            position: sticky;
+            top: 15px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #e63946;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #171717;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #e63946;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 500px;
+            padding: 70px 8%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+
+            background:
+                linear-gradient(120deg, #fff1f3, #ffe1e6, #fff);
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ffe0e5;
+            color: #d62839;
+
+            padding: 8px 18px;
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.05;
+            color: #171717;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #e63946;
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #e63946;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #c91f32;
+            transform: translateY(-3px);
+        }
+
+        .hero-icon {
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fff;
+            box-shadow: 0 20px 50px rgba(230,57,70,0.18);
+
+            color: #e63946;
+            font-size: 120px;
+
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* ================= SECTION ================= */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: #171717;
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 span {
+            color: #e63946;
+        }
+
+        .section-title p {
+            color: #555;
+        }
+
+        /* ================= FORM ================= */
+
+        .request-section {
+            background: #fff;
+        }
+
+        .form-container {
+            max-width: 950px;
+            margin: auto;
+
+            padding: 40px;
+
+            background: #fff;
+            border-radius: 25px;
+
+            box-shadow: 0 15px 45px rgba(0,0,0,0.09);
+
+            border: 1px solid #ffe0e4;
+        }
+
+        .form-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 30px;
+        }
+
+        .form-title i {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #ffe1e5;
+            color: #e63946;
+        }
+
+        .form-title h3 {
+            font-size: 24px;
+            color: #171717;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .input-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            border: 1.5px solid #ddd;
+            border-radius: 12px;
+
+            outline: none;
+
+            font-size: 14px;
+            color: #222;
+
+            background: #fff;
+
+            transition: 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            border-color: #e63946;
+            box-shadow: 0 0 0 4px rgba(230,57,70,0.08);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            margin-top: 28px;
+
+            width: 100%;
+            padding: 15px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: #e63946;
+            color: white;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #c91f32;
+            transform: translateY(-2px);
+        }
+
+        /* ================= ACTIVE REQUESTS ================= */
+
+        .requests-section {
+            background: #fff4f5;
+        }
+
+        .request-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .request-card {
+            background: white;
+            padding: 28px;
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+            border-top: 5px solid #e63946;
+
+            transition: 0.3s;
+        }
+
+        .request-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+        }
+
+        .blood-badge {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #ffe1e5;
+            color: #e63946;
+
+            border-radius: 16px;
+
+            font-size: 20px;
+            font-weight: 800;
+
+            margin-bottom: 18px;
+        }
+
+        .request-card h3 {
+            margin-bottom: 12px;
+            color: #171717;
+        }
+
+        .request-card p {
+            margin: 8px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .request-card p i {
+            width: 20px;
+            color: #e63946;
+        }
+
+        .urgency {
+            display: inline-block;
+
+            margin-top: 15px;
+            padding: 6px 12px;
+
+            background: #ffe1e5;
+            color: #d62839;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .request-btn {
+            display: block;
+
+            text-align: center;
+
+            margin-top: 20px;
+
+            padding: 11px;
+
+            border-radius: 10px;
+
+            background: #171717;
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .request-btn:hover {
+            background: #e63946;
+        }
+
+        /* ================= HOW IT HELPS ================= */
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .help-card {
+            padding: 35px 25px;
+            text-align: center;
+
+            background: #fff;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+            transition: 0.3s;
+        }
+
+        .help-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .help-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: auto auto 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 20px;
+
+            background: #ffe1e5;
+            color: #e63946;
+
+            font-size: 28px;
+        }
+
+        .help-card h3 {
+            margin-bottom: 10px;
+            color: #171717;
+        }
+
+        .help-card p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* ================= CTA ================= */
+
+        .cta {
+            padding: 70px 8%;
+
+            background: linear-gradient(135deg, #e63946, #c91f32);
+
+            text-align: center;
+
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .cta-btn {
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            background: white;
+            color: #e63946;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #171717;
+            color: white;
+
+            padding: 50px 8% 25px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand h2 {
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        .footer-brand p {
+            color: #ccc;
+            max-width: 400px;
+            line-height: 1.7;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            display: block;
+
+            color: #ccc;
+            text-decoration: none;
+
+            margin: 8px 0;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #e63946;
+        }
+
+        .copyright {
+            text-align: center;
+
+            border-top: 1px solid #333;
+
+            margin-top: 35px;
+            padding-top: 20px;
+
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .request-grid,
+            .help-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+        }
+
+        @media(max-width: 650px) {
+
+            nav {
+                width: 94%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .hero-icon {
+                width: 220px;
+                height: 220px;
+                font-size: 80px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .form-container {
+                padding: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .input-group.full {
+                grid-column: auto;
+            }
+
+            .request-grid,
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .cta h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <a href="index.html" class="logo">
+            🩸 Blood<span>Reach</span>
+        </a>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donor.html">Find Donor</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="request.html" class="active">Request Blood</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                🚨 BLOOD REQUEST
+            </span>
+
+            <h1>
+                Need blood?
+                <span>We're here to help.</span>
+            </h1>
+
+            <p>
+                Create a blood request and connect with people
+                who are willing to help. Every request can bring
+                hope to someone who needs it.
+            </p>
+
+            <a href="#request-form" class="hero-btn">
+                Create Blood Request
+            </a>
+
+        </div>
+
+        <div class="hero-icon">
+            <i class="fa-solid fa-hand-holding-medical"></i>
+        </div>
+
+    </section>
+
+
+    <!-- ================= REQUEST FORM ================= -->
+
+    <section class="request-section" id="request-form">
+
+        <div class="section-title">
+
+            <h2>
+                Create a <span>Blood Request</span>
+            </h2>
+
+            <p>
+                Enter the details below so donors can understand your requirement.
+            </p>
+
+        </div>
+
+
+        <div class="form-container">
+
+            <div class="form-title">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <h3>Blood Request Details</h3>
+
+            </div>
+
+
+            <form>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label>Patient Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter patient's name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Blood Group</label>
+
+                        <select required>
+
+                            <option value="">Select blood group</option>
+
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Hospital Name</label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter hospital name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Location</label>
+
+                        <input
+                            type="text"
+                            placeholder="City / Area"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Required Date</label>
+
+                        <input
+                            type="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Required Units</label>
+
+                        <select required>
+
+                            <option value="">Select units</option>
+                            <option>1 Unit</option>
+                            <option>2 Units</option>
+                            <option>3 Units</option>
+                            <option>4 Units</option>
+                            <option>5+ Units</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Contact Number</label>
+
+                        <input
+                            type="tel"
+                            placeholder="Enter contact number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Urgency Level</label>
+
+                        <select required>
+
+                            <option value="">Select urgency</option>
+                            <option>Normal</option>
+                            <option>Urgent</option>
+                            <option>Emergency</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group full">
+
+                        <label>Additional Message</label>
+
+                        <textarea
+                            placeholder="Add any important information about the blood requirement..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Submit Blood Request
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SAMPLE REQUESTS ================= -->
+
+    <section class="requests-section">
+
+        <div class="section-title">
+
+            <h2>
+                Active <span>Blood Requests</span>
+            </h2>
+
+            <p>
+                Example requests displayed to show how the BloodReach network can work.
+            </p>
+
+        </div>
+
+
+        <div class="request-grid">
+
+
+            <div class="request-card">
+
+                <div class="blood-badge">
+                    O+
+                </div>
+
+                <h3>Sample Request</h3>
+
+                <p>
+                    <i class="fa-solid fa-hospital"></i>
+                    City Care Hospital
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Kolhapur
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    2 Units Required
+                </p>
+
+                <span class="urgency">
+                    URGENT
+                </span>
+
+                <a href="#" class="request-btn">
+                    View Request
+                </a>
+
+            </div>
+
+
+            <div class="request-card">
+
+                <div class="blood-badge">
+                    B+
+                </div>
+
+                <h3>Sample Request</h3>
+
+                <p>
+                    <i class="fa-solid fa-hospital"></i>
+                    LifeCare Hospital
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Ichalkaranji
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    1 Unit Required
+                </p>
+
+                <span class="urgency">
+                    NORMAL
+                </span>
+
+                <a href="#" class="request-btn">
+                    View Request
+                </a>
+
+            </div>
+
+
+            <div class="request-card">
+
+                <div class="blood-badge">
+                    A-
+                </div>
+
+                <h3>Sample Request</h3>
+
+                <p>
+                    <i class="fa-solid fa-hospital"></i>
+                    Sunrise Medical Center
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Sangli
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    3 Units Required
+                </p>
+
+                <span class="urgency">
+                    EMERGENCY
+                </span>
+
+                <a href="#" class="request-btn">
+                    View Request
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW BLOODREACH HELPS ================= -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>
+                How <span>BloodReach</span> Helps
+            </h2>
+
+            <p>
+                Making blood requests simpler and easier to connect.
+            </p>
+
+        </div>
+
+
+        <div class="help-grid">
+
+
+            <div class="help-card">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>Quick Requests</h3>
+
+                <p>
+                    Create a blood requirement request
+                    with important patient and hospital details.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <h3>Community Donors</h3>
+
+                <p>
+                    Connect blood seekers with a community
+                    of potential blood donors.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <div class="help-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+                <h3>Emergency Support</h3>
+
+                <p>
+                    Help make important blood requirements
+                    visible when time matters.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <div class="cta">
+
+        <h2>
+            Someone's Hope Could Start With You ❤️
+        </h2>
+
+        <p>
+            Become a donor and help build a stronger blood community.
+        </p>
+
+        <a href="donate.html" class="cta-btn">
+            Become a Donor
+        </a>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <h2>🩸 BloodReach</h2>
+
+                <p>
+                    Connecting blood donors with people in need.
+                    Together, we can make every drop count.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="donor.html">Find Donor</a>
+                <a href="donate.html">Become a Donor</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Support</h3>
+
+                <a href="request.html">Request Blood</a>
+                <a href="login.html">Login</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 BloodReach. Every Drop Matters ❤️
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
