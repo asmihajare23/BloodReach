@@ -4,13 +4,605 @@
 <head>
 
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Login | BloodReach</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                linear-gradient(135deg, #fff1f3, #ffe0e5, #ffffff);
+
+            color: #171717;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+
+            width: 92%;
+            max-width: 1200px;
+
+            margin: 20px auto;
+            padding: 15px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: rgba(255,255,255,0.95);
+
+            border-radius: 18px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+        }
+
+
+        .logo {
+
+            text-decoration: none;
+
+            font-size: 24px;
+            font-weight: 800;
+
+            color: #e63946;
+        }
+
+
+        .logo span {
+            color: #171717;
+        }
+
+
+        nav ul {
+
+            display: flex;
+            gap: 25px;
+
+            list-style: none;
+        }
+
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #222;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+
+        nav ul li a:hover {
+            color: #e63946;
+        }
+
+
+        /* ================= LOGIN AREA ================= */
+
+        .login-section {
+
+            min-height: calc(100vh - 100px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 50px 6%;
+        }
+
+
+        .login-container {
+
+            width: 100%;
+            max-width: 1000px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            background: white;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+
+
+        /* ================= LEFT SIDE ================= */
+
+        .login-left {
+
+            padding: 60px 45px;
+
+            background:
+                linear-gradient(145deg, #e63946, #c91f32);
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .login-left .icon {
+
+            width: 75px;
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            color: #e63946;
+
+            border-radius: 22px;
+
+            font-size: 35px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .login-left h1 {
+
+            font-size: 45px;
+            line-height: 1.15;
+
+            margin-bottom: 18px;
+        }
+
+
+        .login-left h1 span {
+            color: #ffe3e6;
+        }
+
+
+        .login-left p {
+
+            color: white;
+
+            line-height: 1.8;
+
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .login-points {
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+
+        .login-point {
+
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            font-size: 14px;
+        }
+
+
+        .login-point i {
+
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(255,255,255,0.18);
+
+            border-radius: 50%;
+        }
+
+
+        /* ================= RIGHT SIDE ================= */
+
+        .login-right {
+
+            padding: 60px 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .login-title {
+
+            margin-bottom: 30px;
+        }
+
+
+        .login-title h2 {
+
+            font-size: 32px;
+
+            color: #171717;
+
+            margin-bottom: 7px;
+        }
+
+
+        .login-title p {
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= FORM ================= */
+
+        .input-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        .input-group label {
+
+            display: block;
+
+            font-weight: 600;
+
+            font-size: 14px;
+
+            margin-bottom: 8px;
+
+            color: #222;
+        }
+
+
+        .input-box {
+
+            position: relative;
+        }
+
+
+        .input-box i {
+
+            position: absolute;
+
+            left: 16px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #e63946;
+        }
+
+
+        .input-box input {
+
+            width: 100%;
+
+            padding: 14px 16px 14px 45px;
+
+            border: 1.5px solid #ddd;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            font-size: 14px;
+
+            color: #222;
+
+            transition: 0.3s;
+        }
+
+
+        .input-box input:focus {
+
+            border-color: #e63946;
+
+            box-shadow:
+                0 0 0 4px rgba(230,57,70,0.08);
+        }
+
+
+        /* ================= OPTIONS ================= */
+
+        .options {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 25px;
+
+            font-size: 13px;
+        }
+
+
+        .remember {
+
+            display: flex;
+            align-items: center;
+
+            gap: 7px;
+
+            color: #444;
+        }
+
+
+        .remember input {
+            accent-color: #e63946;
+        }
+
+
+        .forgot {
+
+            color: #e63946;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+
+        .forgot:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= LOGIN BUTTON ================= */
+
+        .login-btn {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 12px;
+
+            background: #e63946;
+
+            color: white;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .login-btn:hover {
+
+            background: #c91f32;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(230,57,70,0.25);
+        }
+
+
+        /* ================= DIVIDER ================= */
+
+        .divider {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 25px 0;
+
+            color: #999;
+
+            font-size: 12px;
+        }
+
+
+        .divider::before,
+        .divider::after {
+
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #ddd;
+        }
+
+
+        /* ================= REGISTER ================= */
+
+        .register-text {
+
+            text-align: center;
+
+            font-size: 14px;
+
+            color: #555;
+        }
+
+
+        .register-text a {
+
+            color: #e63946;
+
+            text-decoration: none;
+
+            font-weight: 700;
+        }
+
+
+        .register-text a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ================= EMERGENCY ================= */
+
+        .emergency {
+
+            margin-top: 25px;
+
+            padding: 15px;
+
+            background: #fff1f3;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .emergency i {
+
+            color: #e63946;
+
+            font-size: 22px;
+        }
+
+
+        .emergency p {
+
+            font-size: 12px;
+
+            color: #555;
+
+            line-height: 1.5;
+        }
+
+
+        .emergency strong {
+            color: #171717;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+
+            .login-container {
+
+                grid-template-columns: 1fr;
+
+                max-width: 550px;
+            }
+
+
+            .login-left {
+
+                padding: 40px 30px;
+            }
+
+
+            .login-left h1 {
+
+                font-size: 36px;
+            }
+
+
+            .login-right {
+
+                padding: 40px 30px;
+            }
+
+        }
+
+
+        @media(max-width: 500px) {
+
+            nav {
+
+                width: 94%;
+
+                padding: 14px 18px;
+            }
+
+
+            .login-section {
+
+                padding: 30px 5%;
+            }
+
+
+            .login-left,
+            .login-right {
+
+                padding: 35px 25px;
+            }
+
+
+            .login-title h2 {
+
+                font-size: 28px;
+            }
+
+
+            .options {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -18,396 +610,282 @@
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVBAR ================= -->
 
-<nav class="navbar">
+    <nav>
 
-    <a href="index.html" class="logo">
-        Blood<span>Reach</span> 🩸
-    </a>
+        <a href="index.html" class="logo">
+            🩸 Blood<span>Reach</span>
+        </a>
 
 
-    <ul class="nav-links">
+        <ul>
 
-        <li>
-            <a href="index.html">Home</a>
-        </li>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
 
-        <li>
-            <a href="about.html">About</a>
-        </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
 
-        <li>
-            <a href="find-donor.html">Find Donor</a>
-        </li>
+            <li>
+                <a href="donor.html">Find Donor</a>
+            </li>
 
-        <li>
-            <a href="become-donor.html">Donate</a>
-        </li>
+            <li>
+                <a href="donate.html">Donate</a>
+            </li>
 
-        <li>
-            <a href="request-blood.html">Request Blood</a>
-        </li>
+            <li>
+                <a href="request.html">Request Blood</a>
+            </li>
 
-        <li>
-            <a href="blood-requests.html">Requests</a>
-        </li>
+        </ul>
 
-        <li>
-            <a href="blood-banks.html">Blood Banks</a>
-        </li>
-
-        <li>
-            <a href="login.html" class="nav-login">
-                Login
-            </a>
-        </li>
-
-    </ul>
-
-</nav>
+    </nav>
 
 
 
-<!-- ================= LOGIN PAGE ================= -->
+    <!-- ================= LOGIN ================= -->
 
-<section class="auth-page">
-
-
-    <div class="auth-container">
+    <section class="login-section">
 
 
-        <!-- LEFT SIDE -->
-
-        <div class="auth-brand">
-
-            <div class="auth-icon">
-                🩸
-            </div>
+        <div class="login-container">
 
 
-            <h1>
-                Welcome Back
-            </h1>
+            <!-- LEFT -->
+
+            <div class="login-left">
 
 
-            <p>
-                Sign in to BloodReach and stay connected
-                with a community working together to
-                support blood donation.
-            </p>
+                <div class="icon">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                </div>
 
 
-            <br>
+                <h1>
+
+                    Welcome back to
+                    <span>BloodReach.</span>
+
+                </h1>
 
 
-            <p>
-                ❤️ Give Blood. Give Hope.
-            </p>
+                <p>
 
-        </div>
+                    Sign in to connect with the blood
+                    donation community and manage your
+                    donor or blood request information.
 
-
-
-        <!-- RIGHT SIDE -->
-
-        <div class="auth-form">
+                </p>
 
 
-            <h2>
-                Login
-            </h2>
+                <div class="login-points">
 
 
-            <p class="auth-subtitle">
-                Access your BloodReach account
-            </p>
+                    <div class="login-point">
+
+                        <i class="fa-solid fa-droplet"></i>
+
+                        <span>
+                            Connect with blood donors
+                        </span>
+
+                    </div>
 
 
+                    <div class="login-point">
 
-            <!-- SOCIAL LOGIN -->
+                        <i class="fa-solid fa-hand-holding-heart"></i>
 
-            <div class="social-login">
+                        <span>
+                            Help people in your community
+                        </span>
 
-
-                <button
-                    type="button"
-                    class="social-btn google"
-                    onclick="googleLogin()"
-                >
-
-                    <strong>G</strong>
-                    &nbsp; Continue with Google
-
-                </button>
+                    </div>
 
 
+                    <div class="login-point">
 
-                <button
-                    type="button"
-                    class="social-btn facebook"
-                    onclick="facebookLogin()"
-                >
+                        <i class="fa-solid fa-shield-heart"></i>
 
-                    <strong>f</strong>
-                    &nbsp; Continue with Facebook
+                        <span>
+                            Keep your information secure
+                        </span>
 
-                </button>
+                    </div>
+
+
+                </div>
+
 
             </div>
 
 
 
-            <!-- DIVIDER -->
+            <!-- RIGHT -->
 
-            <div class="divider">
-
-                OR CONTINUE WITH EMAIL
-
-            </div>
+            <div class="login-right">
 
 
+                <div class="login-title">
 
-            <!-- LOGIN FORM -->
+                    <h2>
+                        Login
+                    </h2>
 
-            <form onsubmit="loginUser(event)">
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="loginEmail">
-                        Email Address
-                    </label>
-
-
-                    <input
-                        type="email"
-                        id="loginEmail"
-                        placeholder="Enter your email"
-                        required
-                    >
+                    <p>
+                        Enter your details to continue.
+                    </p>
 
                 </div>
 
 
 
-                <!-- PASSWORD -->
-
-                <div class="form-group">
-
-                    <label for="loginPassword">
-                        Password
-                    </label>
+                <form>
 
 
-                    <input
-                        type="password"
-                        id="loginPassword"
-                        placeholder="Enter your password"
-                        required
-                    >
+                    <!-- EMAIL -->
 
+                    <div class="input-group">
+
+                        <label>
+                            Email Address
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Password
+                        </label>
+
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="options">
+
+
+                        <label class="remember">
+
+                            <input type="checkbox">
+
+                            Remember me
+
+                        </label>
+
+
+                        <a href="#" class="forgot">
+                            Forgot Password?
+                        </a>
+
+
+                    </div>
+
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-btn">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login to BloodReach
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- DIVIDER -->
+
+                <div class="divider">
+                    OR
                 </div>
 
 
 
-                <!-- REMEMBER -->
+                <!-- REGISTER -->
 
-                <div
-                    style="
-                    display:flex;
-                    justify-content:space-between;
-                    align-items:center;
-                    margin-bottom:22px;
-                    font-size:13px;
-                    "
-                >
+                <div class="register-text">
 
-                    <label>
+                    Don't have an account?
 
-                        <input
-                            type="checkbox"
-                        >
-
-                        Remember me
-
-                    </label>
-
-
-                    <a
-                        href="#"
-                        onclick="forgotPassword(); return false;"
-                        style="
-                        color:#c9152b;
-                        font-weight:700;
-                        "
-                    >
-                        Forgot password?
+                    <a href="donate.html">
+                        Become a Donor
                     </a>
 
                 </div>
 
 
 
-                <!-- LOGIN BUTTON -->
+                <!-- EMERGENCY -->
 
-                <button
-                    type="submit"
-                    class="btn btn-primary"
-                    style="width:100%;"
-                >
+                <div class="emergency">
 
-                    🔐 Login
+                    <i class="fa-solid fa-triangle-exclamation"></i>
 
-                </button>
+                    <p>
 
+                        <strong>Need blood urgently?</strong><br>
 
-            </form>
+                        You can create a blood request
+                        without waiting to register.
 
+                    </p>
 
+                </div>
 
-            <!-- SIGN UP -->
-
-            <div class="auth-switch">
-
-                Don't have an account?
-
-                <a href="signup.html">
-                    Create an account
-                </a>
 
             </div>
 
 
         </div>
 
-    </div>
 
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-grid">
-
-
-        <div class="footer-brand">
-
-            <h2>
-                BloodReach 🩸
-            </h2>
-
-
-            <p>
-                Connecting potential blood donors
-                with people who need help.
-            </p>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h3>
-                Explore
-            </h3>
-
-
-            <a href="index.html">
-                Home
-            </a>
-
-
-            <a href="about.html">
-                About
-            </a>
-
-
-            <a href="find-donor.html">
-                Find Donor
-            </a>
-
-
-            <a href="blood-banks.html">
-                Blood Banks
-            </a>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h3>
-                Help
-            </h3>
-
-
-            <a href="become-donor.html">
-                Become a Donor
-            </a>
-
-
-            <a href="request-blood.html">
-                Request Blood
-            </a>
-
-
-            <a href="blood-requests.html">
-                Blood Requests
-            </a>
-
-
-            <a href="emergency.html">
-                Emergency
-            </a>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h3>
-                Account
-            </h3>
-
-
-            <a href="login.html">
-                Login
-            </a>
-
-
-            <a href="signup.html">
-                Sign Up
-            </a>
-
-        </div>
-
-    </div>
-
-
-
-    <div class="footer-bottom">
-
-        © 2026 BloodReach.
-        Built with ❤️ to support blood donation.
-
-    </div>
-
-</footer>
-
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script src="./js/script.js"></script>
+    </section>
 
 
 </body>
