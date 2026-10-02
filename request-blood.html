@@ -8,10 +8,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Request Blood | BloodConnect</title>
+    <title>Request Blood | BloodReach</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -19,320 +18,554 @@
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-<header class="navbar">
+<nav class="navbar">
 
-    <div class="logo">
-        🩸 Blood<span>Connect</span>
-    </div>
-
-    <nav>
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="find-donor.html">
-            Find Donor
-        </a>
-
-        <a href="become-donor.html">
-            Become a Donor
-        </a>
-
-        <a href="blood-requests.html">
-            Requests
-        </a>
-
-        <a href="blood-banks.html">
-            Blood Banks
-        </a>
-
-        <a href="login.html"
-           class="nav-login">
-            Login
-        </a>
-
-    </nav>
-
-</header>
+    <a href="index.html" class="logo">
+        Blood<span>Reach</span> 🩸
+    </a>
 
 
+    <ul class="nav-links">
 
-<!-- ================= PAGE HERO ================= -->
+        <li>
+            <a href="index.html">Home</a>
+        </li>
 
-<section class="emergency-hero">
+        <li>
+            <a href="about.html">About</a>
+        </li>
 
-    <span>
-        BLOOD REQUIREMENT
+        <li>
+            <a href="find-donor.html">Find Donor</a>
+        </li>
+
+        <li>
+            <a href="become-donor.html">Donate</a>
+        </li>
+
+        <li>
+            <a href="request-blood.html">
+                Request Blood
+            </a>
+        </li>
+
+        <li>
+            <a href="blood-requests.html">
+                Requests
+            </a>
+        </li>
+
+        <li>
+            <a href="blood-banks.html">
+                Blood Banks
+            </a>
+        </li>
+
+        <li>
+            <a href="login.html"
+               class="nav-login">
+                Login
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <span class="hero-small">
+        🚨 BLOOD REQUIREMENT
     </span>
+
 
     <h1>
         Request Blood
     </h1>
 
+
     <p>
-        Submit a blood requirement so that potential
-        donors can be informed.
+        Share the blood requirement and help potential
+        donors understand how they can offer support.
     </p>
 
 </section>
 
 
 
-<!-- ================= REQUEST FORM ================= -->
+<!-- =====================================================
+     REQUEST FORM
+===================================================== -->
 
 <section class="form-section">
 
 
-    <form class="modern-form emergency-form"
-          onsubmit="submitBloodRequest(event)">
-
-
-        <div class="form-icon">
-            🩸
-        </div>
+    <div class="form-container">
 
 
         <h2>
-            Blood Requirement Form
+            Blood Request Form
         </h2>
 
 
-        <p class="form-intro">
-            Enter the required information below.
+        <p style="color:#756b6d; margin-bottom:30px;">
+
+            Please provide accurate information so that
+            potential donors can understand the requirement.
+
         </p>
 
 
 
-        <div class="form-grid">
+        <form onsubmit="submitBloodRequest(event)">
 
 
-            <!-- PATIENT NAME -->
+            <div class="form-grid">
 
-            <div>
 
-                <label for="patientName">
-                    Patient Name
-                </label>
+                <!-- PATIENT NAME -->
 
-                <input
-                    type="text"
-                    id="patientName"
-                    placeholder="Enter patient name"
-                    required>
+                <div class="form-group">
+
+                    <label for="patientName">
+                        Patient Name *
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        placeholder="Enter patient's name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- BLOOD GROUP -->
+
+                <div class="form-group">
+
+                    <label for="requiredBloodGroup">
+                        Required Blood Group *
+                    </label>
+
+
+                    <select
+                        id="requiredBloodGroup"
+                        required
+                    >
+
+                        <option value="">
+                            Select Blood Group
+                        </option>
+
+                        <option>A+</option>
+                        <option>A−</option>
+                        <option>B+</option>
+                        <option>B−</option>
+                        <option>AB+</option>
+                        <option>AB−</option>
+                        <option>O+</option>
+                        <option>O−</option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- UNITS -->
+
+                <div class="form-group">
+
+                    <label for="units">
+                        Required Units *
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="units"
+                        min="1"
+                        max="20"
+                        placeholder="Example: 2"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- URGENCY -->
+
+                <div class="form-group">
+
+                    <label for="urgency">
+                        Urgency *
+                    </label>
+
+
+                    <select
+                        id="urgency"
+                        required
+                    >
+
+                        <option value="">
+                            Select Urgency
+                        </option>
+
+                        <option>
+                            Emergency
+                        </option>
+
+                        <option>
+                            Required Today
+                        </option>
+
+                        <option>
+                            Required Within 24 Hours
+                        </option>
+
+                        <option>
+                            Planned Requirement
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- HOSPITAL -->
+
+                <div class="form-group full">
+
+                    <label for="hospital">
+                        Hospital / Medical Centre *
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="hospital"
+                        placeholder="Enter hospital name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- CITY -->
+
+                <div class="form-group">
+
+                    <label for="requestCity">
+                        City *
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="requestCity"
+                        placeholder="Enter city"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- AREA -->
+
+                <div class="form-group">
+
+                    <label for="requestArea">
+                        Area / Locality
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="requestArea"
+                        placeholder="Enter area or locality"
+                    >
+
+                </div>
+
+
+
+                <!-- HOSPITAL ADDRESS -->
+
+                <div class="form-group full">
+
+                    <label for="hospitalAddress">
+                        Hospital Address
+                    </label>
+
+
+                    <textarea
+                        id="hospitalAddress"
+                        placeholder="Enter complete hospital address"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- CONTACT PERSON -->
+
+                <div class="form-group">
+
+                    <label for="contactName">
+                        Contact Person *
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="contactName"
+                        placeholder="Enter contact person's name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="contactPhone">
+                        Contact Number *
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="contactPhone"
+                        placeholder="10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="contactEmail">
+                        Email Address
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="contactEmail"
+                        placeholder="example@email.com"
+                    >
+
+                </div>
+
+
+
+                <!-- REQUIRED DATE -->
+
+                <div class="form-group">
+
+                    <label for="requiredDate">
+                        Required Date *
+                    </label>
+
+
+                    <input
+                        type="date"
+                        id="requiredDate"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ADDITIONAL INFORMATION -->
+
+                <div class="form-group full">
+
+                    <label for="additionalInfo">
+                        Additional Information
+                    </label>
+
+
+                    <textarea
+                        id="additionalInfo"
+                        placeholder="Add any other important information about the blood requirement"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- CONFIRMATION -->
+
+                <div class="form-group full">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            required
+                        >
+
+                        I confirm that the information
+                        provided in this request is accurate.
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <div class="form-group full">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        style="width:100%;"
+                    >
+
+                        🚨 Submit Blood Request
+
+                    </button>
+
+                </div>
 
             </div>
 
+        </form>
+
+    </div>
+
+</section>
 
 
-            <!-- BLOOD GROUP -->
 
-            <div>
+<!-- =====================================================
+     IMPORTANT INFORMATION
+===================================================== -->
 
-                <label for="requiredBlood">
-                    Required Blood Group
-                </label>
+<section class="section quick-section">
 
-                <select
-                    id="requiredBlood"
-                    required>
 
-                    <option value="">
-                        Select Blood Group
-                    </option>
+    <div class="section-heading">
 
-                    <option>A+</option>
-                    <option>A−</option>
-                    <option>B+</option>
-                    <option>B−</option>
-                    <option>AB+</option>
-                    <option>AB−</option>
-                    <option>O+</option>
-                    <option>O−</option>
+        <small>
+            IMPORTANT
+        </small>
 
-                </select>
 
+        <h2>
+            What happens after a request?
+        </h2>
+
+
+        <p>
+            In a real-world implementation, requests
+            would be verified and then shared with
+            suitable potential donors.
+        </p>
+
+    </div>
+
+
+
+    <div class="quick-grid">
+
+
+        <!-- STEP 1 -->
+
+        <div class="quick-card">
+
+            <div class="icon-box">
+                01
             </div>
 
 
-
-            <!-- UNITS -->
-
-            <div>
-
-                <label for="units">
-                    Units Required
-                </label>
-
-                <input
-                    type="number"
-                    id="units"
-                    min="1"
-                    max="20"
-                    placeholder="Number of units"
-                    required>
-
-            </div>
+            <h3>
+                Request Submitted
+            </h3>
 
 
-
-            <!-- HOSPITAL -->
-
-            <div>
-
-                <label for="hospital">
-                    Hospital / Medical Centre
-                </label>
-
-                <input
-                    type="text"
-                    id="hospital"
-                    placeholder="Hospital name"
-                    required>
-
-            </div>
-
-
-
-            <!-- CITY -->
-
-            <div>
-
-                <label for="requestCity">
-                    City
-                </label>
-
-                <input
-                    type="text"
-                    id="requestCity"
-                    placeholder="Enter city"
-                    required>
-
-            </div>
-
-
-
-            <!-- CONTACT -->
-
-            <div>
-
-                <label for="contact">
-                    Contact Number
-                </label>
-
-                <input
-                    type="tel"
-                    id="contact"
-                    pattern="[0-9]{10}"
-                    placeholder="10-digit contact number"
-                    required>
-
-            </div>
-
+            <p>
+                The blood requirement is submitted
+                with patient and hospital information.
+            </p>
 
         </div>
 
 
 
-        <!-- URGENCY -->
+        <!-- STEP 2 -->
 
-        <label for="urgency">
-            Urgency Level
-        </label>
+        <div class="quick-card">
 
-        <select id="urgency"
-                required>
-
-            <option value="">
-                Select urgency level
-            </option>
-
-            <option>
-                Emergency
-            </option>
-
-            <option>
-                Urgent
-            </option>
-
-            <option>
-                Normal
-            </option>
-
-        </select>
+            <div class="icon-box">
+                02
+            </div>
 
 
-        <br>
-        <br>
+            <h3>
+                Request Reviewed
+            </h3>
+
+
+            <p>
+                In a complete system, the request
+                could be reviewed or verified.
+            </p>
+
+        </div>
 
 
 
-        <!-- ADDITIONAL MESSAGE -->
+        <!-- STEP 3 -->
 
-        <label for="message">
-            Additional Information
-        </label>
+        <div class="quick-card">
 
-        <textarea
-            id="message"
-            rows="5"
-            placeholder="Enter any additional information..."
-            style="
-                width:100%;
-                padding:13px;
-                border:1px solid #d9ceca;
-                border-radius:3px;
-                font-family:inherit;
-                resize:vertical;
-                margin-bottom:25px;
-            "></textarea>
+            <div class="icon-box">
+                03
+            </div>
 
 
-
-        <!-- SUBMIT -->
-
-        <button
-            type="submit"
-            class="btn emergency-btn">
-
-            Submit Blood Request
-
-        </button>
+            <h3>
+                Potential Donors Contacted
+            </h3>
 
 
-    </form>
+            <p>
+                Suitable potential donors could be
+                notified about the requirement.
+            </p>
 
-</section>
-
-
-
-<!-- ================= IMPORTANT INFORMATION ================= -->
-
-<section class="notice-section">
-
-    <div class="notice">
-
-        <strong>
-            Important Information
-        </strong>
-
-        <p>
-            BloodConnect is a CEP project prototype.
-            Blood requests displayed on this website are
-            for demonstration purposes.
-        </p>
-
-        <p>
-            In a real implementation, requests would need
-            appropriate verification and secure handling of
-            personal and medical information.
-        </p>
+        </div>
 
     </div>
 
@@ -340,61 +573,161 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     EMERGENCY CTA
+===================================================== -->
+
+<section class="cta">
+
+    <h2>
+        Is this an emergency?
+    </h2>
+
+
+    <p>
+
+        For an immediate medical emergency, contact
+        the hospital, authorized blood bank or
+        appropriate emergency service directly.
+
+    </p>
+
+
+    <a
+        href="emergency.html"
+        class="btn btn-outline"
+    >
+        🚨 Emergency Help
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-    <div class="footer-logo">
-        🩸 BloodConnect
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                BloodReach 🩸
+            </h2>
+
+
+            <p>
+                Connecting potential blood donors
+                with people who need help.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+
+            <a href="index.html">
+                Home
+            </a>
+
+
+            <a href="about.html">
+                About
+            </a>
+
+
+            <a href="find-donor.html">
+                Find Donor
+            </a>
+
+
+            <a href="blood-banks.html">
+                Blood Banks
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Help
+            </h3>
+
+
+            <a href="become-donor.html">
+                Become a Donor
+            </a>
+
+
+            <a href="request-blood.html">
+                Request Blood
+            </a>
+
+
+            <a href="blood-requests.html">
+                Blood Requests
+            </a>
+
+
+            <a href="emergency.html">
+                Emergency
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Account
+            </h3>
+
+
+            <a href="login.html">
+                Login
+            </a>
+
+
+            <a href="signup.html">
+                Sign Up
+            </a>
+
+        </div>
+
     </div>
 
-    <p>
-        Connecting communities. Inspiring donations.
-        Saving lives.
-    </p>
 
 
-    <div class="footer-links">
+    <div class="footer-bottom">
 
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="find-donor.html">
-            Find Donor
-        </a>
-
-        <a href="become-donor.html">
-            Become a Donor
-        </a>
-
-        <a href="blood-requests.html">
-            Requests
-        </a>
-
-        <a href="blood-banks.html">
-            Blood Banks
-        </a>
-
-        <a href="emergency.html">
-            Emergency
-        </a>
+        © 2026 BloodReach.
+        Built with ❤️ to support blood donation.
 
     </div>
-
-
-    <p class="copyright">
-        © 2026 BloodConnect | CEP Project
-    </p>
 
 </footer>
 
 
-<script src="js/script.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="./js/script.js"></script>
+
 
 </body>
 
