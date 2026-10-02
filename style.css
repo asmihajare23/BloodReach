@@ -789,3 +789,53 @@ footer > p {
     }
 
 }
+/* ================= MOBILE MENU ================= */
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    color: #e63946;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        position: relative;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        gap: 0;
+
+        background: white;
+        padding: 15px;
+
+        border-radius: 18px;
+
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px;
+    }
+}
