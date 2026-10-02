@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BloodReach | Give Blood. Give Hope.</title>
 
-   <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<section class="hero fade-in">
 
-    <div class="hero-content">
+<header class="navbar">
 
-        <h1>
-            Give Blood.<br>
-            <span>Give Hope.</span>
-        </h1>
+    <a href="index.html" class="logo">
+        <span>🩸</span> BloodReach
+    </a>
 
-        <p>
-            BloodReach connects generous donors with
-            people who urgently need blood.
-            One donation can save a life.
-        </p>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="donor.html">Find Donor</a>
+        <a href="donate.html">Donate</a>
+        <a href="request.html">Request Blood</a>
+    </nav>
 
-        <a href="donor.html" class="btn btn-primary">
-            Find a Donor
-        </a>
+    <a href="login.html" class="login-btn">
+        Login
+    </a>
 
-        <a href="donate.html" class="btn btn-secondary">
-            Become a Donor
-        </a>
+</header>
 
-    </div>
-
-</section>
 
 <!-- ================= HERO ================= -->
 
@@ -46,28 +50,30 @@
 
     <div class="hero-content">
 
-        <span class="hero-small">
-            🩸 COMMUNITY BLOOD NETWORK
-        </span>
+        <div class="small-title">
+            <span>🩸</span>
+            COMMUNITY BLOOD NETWORK
+        </div>
 
         <h1>
-            Give Blood.
-            <span>Give Hope.</span>
+            GIVE BLOOD.<br>
+            <span>GIVE HOPE.</span>
         </h1>
 
         <p>
-            BloodReach connects generous donors with people
-            who urgently need blood. One donation can become
-            someone's second chance at life.
+            Connect donors with people in need.
+            Together, we can make every drop count.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="find-donor.html" class="btn btn-primary">
-                Find a Donor →
+            <a href="donor.html" class="btn primary-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Find a Donor
             </a>
 
-            <a href="become-donor.html" class="btn btn-outline">
+            <a href="donate.html" class="btn secondary-btn">
+                <i class="fa-solid fa-heart"></i>
                 Become a Donor
             </a>
 
@@ -75,321 +81,109 @@
 
     </div>
 
-
-    <!-- HERO VISUAL -->
-
-    <div class="hero-visual">
+    <div class="hero-blood">
 
         <div class="blood-circle">
-
-            <div class="blood-drop">
-                🩸
-            </div>
-
+            🩸
         </div>
 
-        <div class="hero-card">
+        <div class="floating-card card-one">
+            <i class="fa-solid fa-heart"></i>
+            Every Drop Matters
+        </div>
 
-            <span>Lives connected through</span>
-
-            <strong>BloodReach</strong>
-
-            <p>
-                Every donor can make a difference.
-            </p>
-
+        <div class="floating-card card-two">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            Save A Life
         </div>
 
     </div>
 
 </section>
 
-<section class="section">
 
-    <h2 class="section-title">
-        One Platform. Three Ways to Help.
-    </h2>
+<!-- ================= HELP SECTION ================= -->
 
-    <p class="section-subtitle">
-        Together, we can connect donors with people who need blood.
-    </p>
-
-    <div class="card-container">
-
-        <div class="card">
-            <div class="card-icon">🔎</div>
-
-            <h3>Find a Donor</h3>
-
-            <p>
-                Quickly find suitable blood donors
-                when someone needs urgent help.
-            </p>
-
-            <br>
-
-            <a href="donor.html" class="btn btn-secondary">
-                Find Donor
-            </a>
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🩸</div>
-
-            <h3>Donate Blood</h3>
-
-            <p>
-                Register as a blood donor and
-                help save someone's life.
-            </p>
-
-            <br>
-
-            <a href="donate.html" class="btn btn-secondary">
-                Donate Now
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🚨</div>
-
-            <h3>Request Blood</h3>
-
-            <p>
-                Submit a blood request and connect
-                with available donors.
-            </p>
-
-            <br>
-
-            <a href="request.html" class="btn btn-secondary">
-                Request Blood
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-    <section class="section">
-
-    <h2 class="section-title">
-        One Platform. Three Ways to Help.
-    </h2>
-
-    <p class="section-subtitle">
-        Every action can make a difference.
-    </p>
-
-    <div class="card-container">
-
-        <div class="card">
-
-            <div class="card-icon">🔎</div>
-
-            <h3>Find a Donor</h3>
-
-            <p>
-                Find suitable blood donors based on
-                blood group and location.
-            </p>
-
-            <br>
-
-            <a href="donor.html" class="btn btn-secondary">
-                Find Donor
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🩸</div>
-
-            <h3>Donate Blood</h3>
-
-            <p>
-                Register yourself as a donor and
-                help someone in need.
-            </p>
-
-            <br>
-
-            <a href="donate.html" class="btn btn-secondary">
-                Donate Now
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">🚨</div>
-
-            <h3>Request Blood</h3>
-
-            <p>
-                Request blood for yourself or
-                someone who needs urgent help.
-            </p>
-
-            <br>
-
-            <a href="request.html" class="btn btn-secondary">
-                Request Blood
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ================= QUICK ACTIONS ================= -->
-
-<section class="section quick-section">
+<section class="help-section">
 
     <div class="section-heading">
 
-        <small>HOW CAN YOU HELP?</small>
+        <p>MAKE A DIFFERENCE</p>
 
         <h2>
-            One platform.
-            Three ways to make a difference.
+            HOW CAN YOU <span>HELP?</span>
         </h2>
 
-        <p>
-            Whether you want to donate blood, find a donor,
-            or request blood for someone in need, BloodReach
-            brings the community together.
-        </p>
+        <div class="heading-line"></div>
 
     </div>
 
 
-    <div class="quick-grid">
+    <div class="help-cards">
 
+        <!-- Find Donor -->
 
-        <!-- FIND DONOR -->
+        <a href="donor.html" class="help-card">
 
-        <div class="quick-card">
-
-            <div class="icon-box">
-                🔎
+            <div class="icon-box blue">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
 
-            <h3>
-                Find a Donor
-            </h3>
+            <h3>Find a Donor</h3>
 
             <p>
-                Search for potential blood donors according
-                to blood group and location.
+                Search for suitable blood donors
+                when someone needs help.
             </p>
 
-            <a href="find-donor.html" class="card-link">
-                Search Donors →
-            </a>
+            <span class="card-link">
+                Find Donor →
+            </span>
 
-        </div>
+        </a>
 
 
-        <!-- BECOME DONOR -->
+        <!-- Donate -->
 
-        <div class="quick-card">
+        <a href="donate.html" class="help-card">
 
-            <div class="icon-box">
-                ❤️
+            <div class="icon-box red">
+                <i class="fa-solid fa-droplet"></i>
             </div>
 
-            <h3>
-                Become a Donor
-            </h3>
+            <h3>Donate Blood</h3>
 
             <p>
-                Register yourself as a potential donor and
-                help someone when they need it most.
+                Become a donor and help someone
+                in need of blood.
             </p>
 
-            <a href="become-donor.html" class="card-link">
-                Register Now →
-            </a>
+            <span class="card-link">
+                Become a Donor →
+            </span>
 
-        </div>
+        </a>
 
 
-        <!-- REQUEST BLOOD -->
+        <!-- Request -->
 
-        <div class="quick-card">
+        <a href="request.html" class="help-card">
 
-            <div class="icon-box">
-                🚨
+            <div class="icon-box orange">
+                <i class="fa-solid fa-truck-medical"></i>
             </div>
 
-            <h3>
-                Request Blood
-            </h3>
+            <h3>Request Blood</h3>
 
             <p>
-                Submit a blood request and reach potential
-                donors in your community.
+                Submit a blood request and
+                reach potential donors quickly.
             </p>
 
-            <a href="request-blood.html" class="card-link">
+            <span class="card-link">
                 Request Blood →
-            </a>
+            </span>
 
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="section home-about">
-
-    <div class="about-image">
-        🩸
-    </div>
-
-
-    <div class="about-text">
-
-        <small class="hero-small">
-            ABOUT BLOODREACH
-        </small>
-
-        <h2>
-            A small act can create
-            a big difference.
-        </h2>
-
-        <p>
-            BloodReach is a community-focused platform
-            designed to connect blood donors with people
-            who need blood.
-        </p>
-
-        <p>
-            Our goal is to make the process of finding
-            potential donors simpler, faster and more
-            accessible.
-        </p>
-
-        <p>
-            Because when someone needs blood,
-            every minute matters.
-        </p>
-
-        <a href="about.html" class="btn btn-primary">
-            Learn More
         </a>
 
     </div>
@@ -397,95 +191,87 @@
 </section>
 
 
-<!-- ================= STATS ================= -->
+<!-- ================= WHY BLOODREACH ================= -->
 
-<section class="stats">
+<section class="why-section">
 
-    <div class="stat">
+    <div class="section-heading">
 
-        <h3>500+</h3>
-
-        <p>
-            Potential Donors
-        </p>
-
-    </div>
-
-
-    <div class="stat">
-
-        <h3>120+</h3>
-
-        <p>
-            Blood Requests
-        </p>
-
-    </div>
-
-
-    <div class="stat">
-
-        <h3>85+</h3>
-
-        <p>
-            Successful Connections
-        </p>
-
-    </div>
-
-
-    <div class="stat">
-
-        <h3>8</h3>
-
-        <p>
-            Blood Groups
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= BLOOD GROUPS ================= -->
-
-<section class="section blood-groups">
-
-    <div class="section-heading" style="margin-left:auto;margin-right:auto;">
-
-        <small>
-            BLOOD TYPES
-        </small>
+        <p>OUR PURPOSE</p>
 
         <h2>
-            Every blood group matters.
+            WHY <span>BLOODREACH?</span>
         </h2>
 
-        <p>
-            Know your blood group and be ready to help
-            someone who may need it.
-        </p>
+        <div class="heading-line"></div>
 
     </div>
 
 
-    <div class="groups-grid">
+    <div class="why-container">
 
-        <div class="blood-group">A+</div>
+        <div class="why-item">
 
-        <div class="blood-group">A−</div>
+            <div class="why-icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
 
-        <div class="blood-group">B+</div>
+            <h3>Save Lives</h3>
 
-        <div class="blood-group">B−</div>
+            <p>
+                One blood donation can help
+                save lives when it matters most.
+            </p>
 
-        <div class="blood-group">AB+</div>
+        </div>
 
-        <div class="blood-group">AB−</div>
 
-        <div class="blood-group">O+</div>
+        <div class="why-item">
 
-        <div class="blood-group">O−</div>
+            <div class="why-icon">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <h3>Every Drop Counts</h3>
+
+            <p>
+                Your contribution can make
+                a meaningful difference.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+
+            <h3>Build Community</h3>
+
+            <p>
+                Connect donors and recipients
+                through a helpful community.
+            </p>
+
+        </div>
+
+
+        <div class="why-item">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-truck-medical"></i>
+            </div>
+
+            <h3>Quick Help</h3>
+
+            <p>
+                Make it easier to find blood
+                during urgent situations.
+            </p>
+
+        </div>
 
     </div>
 
@@ -494,20 +280,27 @@
 
 <!-- ================= CTA ================= -->
 
-<section class="cta">
+<section class="cta-section">
 
-    <h2>
-        Someone's life may depend on you.
-    </h2>
+    <div>
 
-    <p>
-        Become a potential blood donor today and
-        help create a stronger, more connected community.
-    </p>
+        <span>❤️</span>
 
-    <a href="become-donor.html" class="btn btn-outline">
-        Become a Donor ❤️
-    </a>
+        <h2>
+            BE SOMEONE'S REASON TO HOPE.
+        </h2>
+
+        <p>
+            Your one decision today can make
+            a difference in someone's life.
+        </p>
+
+        <a href="donate.html" class="cta-btn">
+            Become a Blood Donor
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
 
 </section>
 
@@ -516,141 +309,35 @@
 
 <footer>
 
-    <div class="footer-grid">
+    <div class="footer-logo">
+        🩸 BloodReach
+    </div>
 
+    <p>
+        Connecting hearts, donors and hope.
+    </p>
 
-        <div class="footer-brand">
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="donor.html">Find Donor</a>
+        <a href="donate.html">Donate</a>
+        <a href="request.html">Request Blood</a>
+    </div>
 
-            <h2>
-                BloodReach 🩸
-            </h2>
+    <div class="socials">
 
-            <p>
-                Connecting potential blood donors
-                with people who need help.
-            </p>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>
-                Explore
-            </h3>
-
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <a href="find-donor.html">Find Donor</a>
-
-            <a href="blood-banks.html">Blood Banks</a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>
-                Help
-            </h3>
-
-            <a href="become-donor.html">
-                Become a Donor
-            </a>
-
-            <a href="request-blood.html">
-                Request Blood
-            </a>
-
-            <a href="blood-requests.html">
-                Blood Requests
-            </a>
-
-            <a href="emergency.html">
-                Emergency
-            </a>
-
-        </div>
-
-
-        <div class="footer-column">
-
-            <h3>
-                Account
-            </h3>
-
-            <a href="login.html">
-                Login
-            </a>
-
-            <a href="signup.html">
-                Sign Up
-            </a>
-
-        </div>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-linkedin"></i>
 
     </div>
 
-
-    <div class="footer-bottom">
-
-        © 2026 BloodReach.
-        Built with ❤️ to support blood donation.
-
-    </div>
+    <p class="copyright">
+        © 2026 BloodReach. Made with ❤️ to save lives.
+    </p>
 
 </footer>
 
-
 </body>
 </html>
-<nav class="navbar">
-
-    <a href="index.html" class="logo">
-        🩸 Blood<span>Reach</span>
-    </a>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="donor.html">Find Donor</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="request.html">Request Blood</a></li>
-        <li><a href="requests.html">Requests</a></li>
-        <li><a href="bloodbanks.html">Blood Banks</a></li>
-        <li><a href="login.html">Login</a></li>
-    </ul>
-
-</nav>
-
-
-<section class="hero">
-
-    <div class="hero-content fade-in">
-
-        <p>🩸 COMMUNITY BLOOD NETWORK</p>
-
-        <h1>
-            Give Blood.<br>
-            <span>Give Hope.</span>
-        </h1>
-
-        <p>
-            BloodReach connects generous donors with
-            people who urgently need blood.
-            One donation can become someone's second chance.
-        </p>
-
-        <a href="donor.html" class="btn btn-primary">
-            Find a Donor →
-        </a>
-
-        <a href="donate.html" class="btn btn-secondary">
-            Become a Donor
-        </a>
-
-    </div>
-
-</section>
